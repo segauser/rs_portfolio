@@ -1,0 +1,9 @@
+@media (max-width: 1440px) {
+  section {
+    padding: calc(60 / 1440 * 100vw) 20px;
+  }
+
+  .page__nav {
+    gap: calc(40 / 1440 * 100vw);
+  }
+}

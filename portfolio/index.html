@@ -3,32 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>PortfolioMe</title>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Oswald&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/modern-normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="shortcut icon" href="image/icons/logo.svg">
 </head>
 <body class="page">
   <header class="page__header">
-    <div class="page__logo">
-      <img src="/" alt="logo">
+    <div class="page__header_wrap">
+      <div class="page__logo">
+            <a href="#"><img src="image/icons/logo.svg" alt="logo"></a>
+          </div>
+          <nav class="page__nav">
+            <ul class="nav page__nav">
+              <li class="nav__item"><a href="#">About me</a></li>
+              <li class="nav__item"><a href="#">Portfolio</a></li>
+              <li class="nav__item"><a href="#">Price</a></li>
+              <li class="nav__item"><a href="#">FAQ</a></li>
+              <li class="nav__item"><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
     </div>
-    <nav class="page__nav">
-      <ul class="nav page__nav">
-        <li class="nav__item">About me</li>
-        <li class="nav__item">Portfolio</li>
-        <li class="nav__item">Price</li>
-        <li class="nav__item">FAQ</li>
-        <li class="nav__item">Contacts</li>
-      </ul>
-    </nav>
+    
   </header>
-  <section class="hero page__hero">
+  <section class="page__hero">
+    <div class="hero page__hero_wrap">
     <div class="hero__vertical-line">
-      <div class="vertical-year">2025</div>
-      <div class="vertical-line"></div>
-      <div class="vertical-description">Best Photographer by MAX</div>
+      <span class="vertical-year">2025</span>
+      <span class="vertical-description">Best Photographer by MAX</span>
+      <!-- <div class="vertical-line"></div> -->
+      
     </div>
     <div class="main hero__main">
-      <div class="main__item">
+      <div class="main__item_info">
         <div class="main__info">
           <div class="stat main__info">
             <div class="stat__item">
@@ -49,44 +60,45 @@
             </div>
           </div>
           <h1 class="main__header">Professional photographer</h1>
-          <div class="main__description">Capture the Moment. Tell Your Story.</div>
+          <span class="main__description">Capture the Moment. Tell Your Story.</span>
         </div>
         <div class="scroll">
           <span>Scroll down</span>
-          <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 1L8 8L1 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+          <img src="image/icons/arrow-down.svg" alt="">
         </div>
       </div>
-      <div class="main__item">
-        <img src="/" alt="pic1">
+      <div class="main__item_photo">
+        <img src="image/webp/img-10.webp" loading="lazy" alt="pic1">
       </div>
-      <div class="main__item">
-        <figure class="main__item main__item_intro">
-          <img src="/" alt="pic2">
-          <figcaption>Hi! I’m Vera, a photographer. For me, photography is more than just an image. </figcaption>
-        </figure>
+      <div class="main__item_about">
+        <div class="main__item_intro">
+          <img src="image/webp/img-11.webp" loading="lazy" alt="pic2">
+        </div>
+        <div class="main__item_text">Hi! I’m Vera, a photographer. For me, photography is more than just an image. </div>
         <!-- <div class="picture">
           <img src="/" alt="pic2">
         </div>
         <div class="picture_intro"></div> -->
       </div>
     </div>
+    </div>
   </section>
-  <section class="about page__about">
-    <figure class="about__item">
-      <img src="/" alt="pic3">
-      <h2 class="second__header">About me</h2>
-      <figcaption>Hi! I’m Vera, a photographer with 5 years of experience. For me, photography is more than just an image. It’s a way to feel the moment, capture the atmosphere, and freeze time. I work with people, stories, and emotions.</figcaption>
-    </figure>
-    <figure class="about__item">
-      <figcaption>I shoot all across Europe. I love natural light, genuine emotions, and beautiful details. Each shot is a small piece of art. My goal is to create timeless images that tell your unique story.</figcaption>
-      <img src="/" alt="pic4">
-    </figure>
-    <figure class="about__item">
-      <img src="/" alt="pic5">
-      <figcaption>Seeing with heart. Shooting with soul.</figcaption>
-    </figure>
+  <section class="page__about">
+    <div class="about page__about_wrap">
+      <div class="about__item">
+        <img src="image/webp/img-photographer-1.webp" alt="pic3">
+        <h2 class="second__header">About me</h2>
+        <p>Hi! I’m Vera, a photographer with 5 years of experience. For me, photography is more than just an image. It’s a way to feel the moment, capture the atmosphere, and freeze time. I work with people, stories, and emotions.</p>
+      </div>
+      <div class="about__item">
+        <p>I shoot all across Europe. I love natural light, genuine emotions, and beautiful details. Each shot is a small piece of art. My goal is to create timeless images that tell your unique story.</p>
+        <img src="image/webp/img-photographer-2.webp" alt="pic4">
+      </div>
+      <div class="about__item">
+        <img src="image/webp/img-photographer-3.webp" alt="pic5">
+        <p>Seeing with heart. Shooting with soul.</p>
+      </div>
+    </div>
   </section>
   <section class="page__portfolio">
     <h2 class="second__header second__header_white">My portfolio</h2>
