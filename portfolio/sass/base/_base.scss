@@ -1,0 +1,35 @@
+@use "../abstracts/index" as *;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $font-family, Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+h1 {
+  @include font(300, 116px, 114%);
+  font-family: $second-family, Verdana, sans-serif;
+  margin: 0;
+  @include media-laptop {
+      @include font(300, calc(116 / 1440 * 100vw), 114%);
+    }
+  
+}
+
+h2, .main__description {
+  @include font(400, 32px, 125%);
+}
+
+h3, details {
+  @include font(400, 20px, 140%);
+
+}
+
+img {
+  max-width: 100%;
+}

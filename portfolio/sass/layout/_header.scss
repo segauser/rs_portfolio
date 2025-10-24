@@ -1,0 +1,33 @@
+@use "../abstracts/index" as *;
+
+.page__header {
+  background-color: $color-background;
+}
+
+.header__logo {
+  padding: 20px 0;
+}
+
+.header__logo-link {
+  background-image: url(../image/icons/logo.svg);
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.nav {
+  display: flex;
+	gap: 4rem;
+	flex-direction: row;
+	justify-content: flex-end;
+  list-style: none;
+  text-transform: uppercase;
+	text-align: center;
+}
+
+.nav__item
+  >* {
+  color: $color-text;
+	text-decoration: none; /* убирает подчёркивание линка*/
+}
+

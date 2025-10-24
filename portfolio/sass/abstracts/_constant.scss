@@ -1,0 +1,13 @@
+/* fonts commnet view to production*/
+$font-family: "Mulish", sans-serif;
+$second-family: "Oswald", sans-serif;
+// colors комментарий с "//" не идёт в продакшн 
+$color-background: #222;
+$color-text: #fff;
+$color-hover: #ff3c3c;
+$color-placeholder: #989898;
+
+$content-width: 1440px;
+$tablet-width: 768px;
+$mobile-big-width: 414px;
+$mobile-small-width: 380px;

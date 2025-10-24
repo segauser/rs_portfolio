@@ -7,84 +7,83 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&family=Oswald&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/modern-normalize.css">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/media.css">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="sass/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <!-- <link rel="stylesheet" href="css/media.css"> -->
   <link rel="shortcut icon" href="image/icons/logo.svg">
 </head>
 <body class="page">
   <header class="page__header">
-    <div class="page__header_wrap">
-      <div class="page__logo">
-            <a href="#"><img src="image/icons/logo.svg" alt="logo"></a>
-          </div>
-          <nav class="page__nav">
-            <ul class="nav page__nav">
-              <li class="nav__item"><a href="#">About me</a></li>
-              <li class="nav__item"><a href="#">Portfolio</a></li>
-              <li class="nav__item"><a href="#">Price</a></li>
-              <li class="nav__item"><a href="#">FAQ</a></li>
-              <li class="nav__item"><a href="#">Contacts</a></li>
-            </ul>
-          </nav>
+    <div class="wrapper header__wrapper">
+      <div class="header__logo">
+        <a href="#" class="header__logo-link"></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="nav">
+          <li class="nav__item"><a href="#about">About me</a></li>
+          <li class="nav__item"><a href="#">Portfolio</a></li>
+          <li class="nav__item"><a href="#">Price</a></li>
+          <li class="nav__item"><a href="#">FAQ</a></li>
+          <li class="nav__item"><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
     </div>
-    
   </header>
   <section class="page__hero">
-    <div class="hero page__hero_wrap">
-    <div class="hero__vertical-line">
-      <span class="vertical-year">2025</span>
-      <span class="vertical-description">Best Photographer by MAX</span>
-      <!-- <div class="vertical-line"></div> -->
-      
-    </div>
-    <div class="main hero__main">
-      <div class="main__item_info">
-        <div class="main__info">
-          <div class="stat main__info">
-            <div class="stat__item">
-              <div class="stat__plus">+</div>
-              <div class="stat__descr">
-                <div class="stat__numb">487</div>
-                <div class="stat__text">Photo sessions</div>
-              </div>
-            </div>
-            <div class="stat__item">
+    <div class="wrapper hero__wrapper">
+      <div class="hero__side">
+        <span class="vertical-year">2025</span>
+        <span class="vertical-description">Best Photographer by MAX</span>
+        <!-- <div class="vertical-line"></div> -->
+        
+      </div>
+      <div class="main hero__main">
+        <div class="main__item_info">
+          <div class="main__info">
+            <div class="stat">
               <div class="stat__item">
                 <div class="stat__plus">+</div>
                 <div class="stat__descr">
-                  <div class="stat__numb">356</div>
-                  <div class="stat__text">Satisfied clients</div>
+                  <div class="stat__numb">487</div>
+                  <div class="stat__text">Photo sessions</div>
+                </div>
+              </div>
+              <div class="stat__item">
+                <div class="stat__item">
+                  <div class="stat__plus">+</div>
+                  <div class="stat__descr">
+                    <div class="stat__numb">356</div>
+                    <div class="stat__text">Satisfied clients</div>
+                </div>
+              </div>
               </div>
             </div>
-            </div>
+            <h1 class="main__header">Professional photographer</h1>
+            <span class="main__description">Capture the Moment. Tell Your Story.</span>
           </div>
-          <h1 class="main__header">Professional photographer</h1>
-          <span class="main__description">Capture the Moment. Tell Your Story.</span>
+          <a href="#" class="main__scroll" >
+            <span>Scroll down</span>
+            <img src="image/icons/arrow-down.svg" alt="">
+          </a>
         </div>
-        <div class="scroll">
-          <span>Scroll down</span>
-          <img src="image/icons/arrow-down.svg" alt="">
+        <div class="main__item_photo">
+          <img src="image/webp/img-10.webp" loading="lazy" alt="pic1">
+        </div>
+        <div class="main__item_about">
+          <div class="main__item_intro">
+            <img src="image/webp/img-11.webp" loading="lazy" alt="pic2">
+          </div>
+          <div class="main__item_text">Hi! I’m Vera, a photographer. For me, photography is more than just an image. </div>
+          <!-- <div class="picture">
+            <img src="/" alt="pic2">
+          </div>
+          <div class="picture_intro"></div> -->
         </div>
       </div>
-      <div class="main__item_photo">
-        <img src="image/webp/img-10.webp" loading="lazy" alt="pic1">
-      </div>
-      <div class="main__item_about">
-        <div class="main__item_intro">
-          <img src="image/webp/img-11.webp" loading="lazy" alt="pic2">
-        </div>
-        <div class="main__item_text">Hi! I’m Vera, a photographer. For me, photography is more than just an image. </div>
-        <!-- <div class="picture">
-          <img src="/" alt="pic2">
-        </div>
-        <div class="picture_intro"></div> -->
-      </div>
-    </div>
     </div>
   </section>
-  <section class="page__about">
-    <div class="about page__about_wrap">
+  <section id="about" class="page__about">
+    <div class="wrapper">
       <div class="about__item">
         <img src="image/webp/img-photographer-1.webp" alt="pic3">
         <h2 class="second__header">About me</h2>
@@ -101,24 +100,30 @@
     </div>
   </section>
   <section class="page__portfolio">
-    <h2 class="second__header second__header_white">My portfolio</h2>
-    <div class="second__description">Every shoot is a story. Here you’ll find portraits, love stories, family sessions, and more.</div>
-    <div class="slider">
-      <div class="slider__item"><img src="/" alt="slide_1"></div>
-      <div class="slider__item"><img src="/" alt="slide_2"></div>
-      <div class="slider__item"><img src="/" alt="slide_3"></div>
-      <div class="slider__item"><img src="/" alt="slide_4"></div>
-      <div class="slider__item"><img src="/" alt="slide_5"></div>
-      <div class="slider__item"><img src="/" alt="slide_6"></div>
-      <div class="slider__item"><img src="/" alt="slide_7"></div>
-      <div class="slider__item"><img src="/" alt="slide_8"></div>
-      <div class="slider__item"><img src="/" alt="slide_9"></div>
-      <div class="slider__item"><img src="/" alt="slide_10"></div>
-      <div class="slider__item"><img src="/" alt="slide_11"></div>
-      <div class="slider__item"><img src="/" alt="slide_12"></div>
+    <div class="wrapper">
+      <h2 class="second__header second__header_white">My portfolio</h2>
+          <div class="second__description">Every shoot is a story. Here you’ll find portraits, love stories, family sessions, and more.</div>
+          <div class="slider">
+            <div class="slider__item"><img src="/" alt="slide_1"></div>
+            <div class="slider__item"><img src="/" alt="slide_2"></div>
+            <div class="slider__item"><img src="/" alt="slide_3"></div>
+            <div class="slider__item"><img src="/" alt="slide_4"></div>
+            <div class="slider__item"><img src="/" alt="slide_5"></div>
+            <div class="slider__item"><img src="/" alt="slide_6"></div>
+            <div class="slider__item"><img src="/" alt="slide_7"></div>
+            <div class="slider__item"><img src="/" alt="slide_8"></div>
+            <div class="slider__item"><img src="/" alt="slide_9"></div>
+            <div class="slider__item"><img src="/" alt="slide_10"></div>
+            <div class="slider__item"><img src="/" alt="slide_11"></div>
+            <div class="slider__item"><img src="/" alt="slide_12"></div>
+          </div>
     </div>
+   
   </section>
   <section class="page__price">
+    <div class="wrapper">
+
+    </div>
     <h2 class="second__header second__header_white">Packages & Pricing</h2>
     <div class="second__description">Choose the package that suits your story. All options are customizable to your needs.</div>
     <div class="packages">
@@ -209,6 +214,9 @@
     </div>
   </section>
   <section class="page__faq">
+    <div class="wrapper">
+      
+    </div>
     <div class="faq">
       <h2 class="second__header second__header_white">Frequently Asked Questions</h2>
       <div class="second__description">Everything You Wanted to Ask (and a Bit More)</div>
@@ -249,6 +257,9 @@
     </div>
   </section>
   <footer class="page__footer">
+    <div class="wrapper">
+      
+    </div>
     <h2 class="second__header">Like my portfolio? Sign up for a shoot!</h2>
     <div class="footer-form">
       <input type="text" name="name" value="" placeholder="YOUR NAME" id="input-name" class="form-control">

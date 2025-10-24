@@ -1,0 +1,23 @@
+@use "../abstracts/index" as *;
+
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-family: $second-family;
+}
+
+.hero__wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  @include media-laptop {
+    gap: calc(20 / 1440 * 100vw)
+  }
+}

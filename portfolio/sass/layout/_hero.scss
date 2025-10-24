@@ -1,0 +1,118 @@
+@use "../abstracts/index" as *;
+
+.page__hero {
+  background-color: $color-background;
+  color: $color-text;
+}
+
+.hero__main {
+  display: flex;
+  gap: 4rem;
+  @include media-laptop {
+    gap: calc(40 / 1440 * 100vw)
+  }
+  // flex-wrap: wrap;
+}
+
+.hero__side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  gap: 12px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  max-width: 60px;
+
+  >*:first-child {
+    order: 1;
+  }
+
+  >*:last-child {
+    white-space: nowrap;
+    order: 3;
+  }
+  
+  &:after {
+    display: block;
+    content: "";
+    order: 2;
+    // transform: rotate(90deg);
+    border-left: 1px solid $color-text;
+    height: 100%;
+  }
+}
+
+
+.main__item {
+  &_photo, &_about, &_info {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+  }
+
+  &_info {
+    max-width: 740px;
+  }
+
+  &_photo {
+    flex-shrink: 0;
+    max-width: 220px;
+    align-self: center;
+    @include media-laptop {
+      max-width: calc(220 / 1440 * 100vw);
+      height: calc(220 / 1440 * 100vw)
+    }
+  }
+
+  &_about {
+    flex-shrink: 0;
+    max-width: 280px;
+    justify-content: space-between;
+    @include media-laptop {
+      max-width: calc(280 / 1440 * 100vw);
+      height: calc(374 / 1440 * 100vw)
+    }
+  }
+
+  &_text {
+    padding-left: 60px;
+	  text-align: right;
+  }
+}
+
+.main__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 100px 0;
+}
+
+.main__description {
+  @include font(400, 20px, 140%);
+  font-family: $second-family, Verdana, sans-serif;
+}
+
+.main__scroll {
+  display: flex;
+  justify-content: space-between;
+  max-width: 119px;
+  color: $color-text;
+	text-decoration: none;
+  margin-top: 60px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  &__item {
+    @include font(300, 48px, 112%);
+    font-family: $second-family, Verdana, sans-serif;
+    display: flex;
+  }
+  &__text {
+    @include font(400, 16px, 150%, none);
+    font-family: $font-family, Verdana, sans-serif;
+  }
+}

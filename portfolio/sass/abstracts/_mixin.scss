@@ -1,0 +1,25 @@
+@use 'constant' as *;
+
+@mixin font ($weight, $size, $line-height, $text-transform: uppercase) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}
+
+@mixin media-laptop {
+  @media screen and (max-width: $content-width) { @content; }
+  }
+
+@mixin media-tablet {
+  @media screen and (max-width: $tablet-width) { @content; }
+  }
+
+@mixin media-mobile {
+  @media screen and (max-width: $mobile-big-width) { @content; }
+  }
+
+@mixin media-smobile {
+  @media screen and (max-width: $mobile-small-width) { @content; }
+  }
+

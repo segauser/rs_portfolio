@@ -1,0 +1,7 @@
+%transition {
+  transition: all .3s ease-out;
+}
+
+.block1 {
+  @extend %transition;
+}
