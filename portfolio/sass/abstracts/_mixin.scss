@@ -7,6 +7,19 @@
   text-transform: $text-transform;
 }
 
+@mixin columns ($width, $wrap: wrap) {
+  display: flex;
+  flex-wrap: $wrap;
+  gap: 4rem;
+  justify-content: space-between;
+  >* {
+    flex-basis: $width;
+  }
+  @include media-laptop {
+    gap: calc(40 / 1440 * 100vw);
+  }
+}
+
 @mixin media-laptop {
   @media screen and (max-width: $content-width) { @content; }
   }
@@ -22,4 +35,18 @@
 @mixin media-smobile {
   @media screen and (max-width: $mobile-small-width) { @content; }
   }
+
+@mixin hover-pointer-fine {
+  @media (hover: hover) and (pointer: fine) { @content; }
+}
+
+@mixin conditional-hover {
+  @media (hover: hover) and (pointer: fine) { 
+      &:hover {
+        transition: all .3s ease-out;
+        color: $color-hover;
+      }
+   }
+}
+
 

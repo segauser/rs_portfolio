@@ -6,9 +6,11 @@
 @use "base/buttons" as *;
 
 //Components
-@use "components/about-us" as *;
+@use "components/hero" as *;
+@use "components/about" as *;
+
 
 //Layouts
+@use "layout/columns" as *;
 @use "layout/wrapper" as *;
 @use "layout/header" as *;
-@use "layout/hero" as *;

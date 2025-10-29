@@ -1,0 +1,13 @@
+@use "../abstracts/index" as *;
+
+.layout-4-column {
+  @include columns ($width: 24%)
+}
+
+.layout-3-column {
+  @include columns ($width: 440px, $wrap: nowrap);
+}
+
+.layout-2-column {
+  @include columns ($width: 45%)
+}

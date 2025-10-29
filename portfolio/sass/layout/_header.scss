@@ -25,9 +25,12 @@
 	text-align: center;
 }
 
-.nav__item
+.nav__item {
   >* {
-  color: $color-text;
-	text-decoration: none; /* убирает подчёркивание линка*/
-}
+    color: $color-text;
+    text-decoration: none; /* убирает подчёркивание линка*/
+    @include conditional-hover;
+  }
 
+
+}

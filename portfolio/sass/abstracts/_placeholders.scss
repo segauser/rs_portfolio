@@ -1,7 +1,9 @@
+@use 'constant' as *;
+
 %transition {
   transition: all .3s ease-out;
 }
 
-.block1 {
-  @extend %transition;
-}
+// .block1 {
+//   @extend %transition;
+// }

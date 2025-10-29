@@ -1,0 +1,192 @@
+@use "../abstracts/index" as *;
+
+.page__hero {
+  background-color: $color-background;
+  color: $color-text;
+}
+
+.hero__main {
+  display: flex;
+  gap: 4rem;
+  @include media-laptop {
+    gap: calc(40 / 1440 * 100vw)
+  }
+  // flex-wrap: wrap;
+}
+
+.hero__side {
+  @include font(500, 12px, 133%, none);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 0;
+  gap: 12px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  max-width: 60px;
+  @include media-laptop {
+      @include font(500, calc(12 / 1440 * 100vw), 133%, none);
+      gap: calc(12 / 1440 * 100vw);
+    }
+
+  >*:first-child {
+    order: 1;
+  }
+
+  >*:last-child {
+    white-space: nowrap;
+    order: 3;
+  }
+  
+  &:after {
+    display: block;
+    content: "";
+    order: 2;
+    border-left: 1px solid $color-text;
+    height: 100%;
+  }
+}
+
+
+.main__item {
+  &_photo, &_about, &_info {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0;
+    @include media-laptop {
+      padding: calc(60 / 1440 * 100vw) 0;
+    }
+  }
+
+  &_info {
+    max-width: 740px;
+  }
+
+  &_photo {
+    flex-shrink: 0;
+    max-width: 220px;
+    align-self: center;
+    @include media-laptop {
+      max-width: calc(220 / 1440 * 100vw);
+      min-height: calc(220 / 1440 * 100vw)
+    }
+  }
+
+  &_about {
+    flex-shrink: 0;
+    max-width: 280px;
+    justify-content: space-between;
+    @include media-laptop {
+      max-width: calc(280 / 1440 * 100vw);
+      min-height: calc(374 / 1440 * 100vw)
+    }
+  }
+
+  &_text {
+    padding-left: 60px;
+	  text-align: right;
+    @include media-laptop {
+      padding-left: calc(60 / 1440 * 100vw);
+    }
+  }
+}
+
+.main__info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 100px 0;
+  @include media-laptop {
+      gap: calc(40 / 1440 * 100vw);
+      margin: calc(100 / 1440 * 100vw) 0;
+    }
+}
+
+.main__description {
+  font-family: $second-family, Verdana, sans-serif;
+  @include font(400, 20px, 125%);
+  @include media-laptop {
+    @include font(400, calc(20 / 1440 * 100vw), 140%);
+  }
+}
+
+.scroll-arrow {
+    @include media-laptop {
+      width: calc(24 / 1440 * 100vw);
+      height: calc(24 / 1440 * 100vw);
+    }
+  }
+
+.main__scroll {
+  display: flex;
+  max-width: 120px;
+  gap: 8px;
+  color: $color-text;
+	text-decoration: none;
+  margin-top: 60px;
+  // @extend %transition;
+
+  // Animation only for computer mouse
+  @include hover-pointer-fine {
+    &:hover {
+      color: $color-hover;
+      transition: color .3s ease;
+
+      .scroll-arrow {
+        path {
+          stroke: $color-hover;
+          transition: stroke .3s ease;
+        }
+      }
+    }
+  }
+
+  // &::after {
+  //   background-image: url(../image/icons/arrow-down.svg);
+  //   content: "";
+  //   display: inline-block;
+  //   width: 24px;
+  //   height: 24px;
+  //   background-size: contain;
+  //   background-repeat: no-repeat;
+
+  //   @include media-laptop {
+  //     width: calc(24 / 1440 * 100vw);
+  //     height: calc(24 / 1440 * 100vw);
+  //   }
+    
+  // }
+
+  @include media-laptop {
+    margin-top: calc(60 / 1440 * 100vw);
+    gap: calc(8 / 1440 * 100vw);
+  }
+
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  &__item {
+    @include font(300, 48px, 112%);
+    font-family: $second-family, Verdana, sans-serif;
+    display: flex;
+    gap: 8px;
+    @include media-laptop {
+      @include font(300, calc(48 / 1440 * 100vw), 112%, none);
+      gap: calc(8 / 1440 * 100vw)
+    }
+  }
+  &__text {
+    margin-top: 8px;
+    @include font(400, 16px, 150%, none);
+    font-family: $font-family, Verdana, sans-serif;
+    @include media-laptop {
+      @include font(400, calc(16 / 1440 * 100vw), 150%, none);
+    }
+  }
+  @include media-laptop {
+      gap: calc(60 / 1440 * 100vw);
+    }
+}
