@@ -1,7 +1,7 @@
 /* fonts commnet view to production*/
-$font-family: "Mulish", sans-serif;
-$second-family: "Oswald", sans-serif;
-// colors комментарий с "//" не идёт в продакшн 
+$font-family: "Mulish", Verdana, sans-serif;
+$second-family: "Oswald", Verdana, sans-serif;
+// comment with "//" only for developers, not production 
 $color-background: #222;
 $color-text: #fff;
 $color-hover: #ff3c3c;

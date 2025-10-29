@@ -103,7 +103,7 @@
 }
 
 .main__description {
-  font-family: $second-family, Verdana, sans-serif;
+  font-family: $second-family;
   @include font(400, 20px, 125%);
   @include media-laptop {
     @include font(400, calc(20 / 1440 * 100vw), 140%);
@@ -170,7 +170,7 @@
   gap: 60px;
   &__item {
     @include font(300, 48px, 112%);
-    font-family: $second-family, Verdana, sans-serif;
+    font-family: $second-family;
     display: flex;
     gap: 8px;
     @include media-laptop {
@@ -181,7 +181,7 @@
   &__text {
     margin-top: 8px;
     @include font(400, 16px, 150%, none);
-    font-family: $font-family, Verdana, sans-serif;
+    font-family: $font-family;
     @include media-laptop {
       @include font(400, calc(16 / 1440 * 100vw), 150%, none);
     }
