@@ -8,9 +8,12 @@
 //Components
 @use "components/hero" as *;
 @use "components/about" as *;
+@use "components/faq" as *;
+@use "components/form" as *;
 
 
 //Layouts
 @use "layout/columns" as *;
 @use "layout/wrapper" as *;
 @use "layout/header" as *;
+@use "layout/footer" as *;

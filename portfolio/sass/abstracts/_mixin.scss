@@ -7,16 +7,22 @@
   text-transform: $text-transform;
 }
 
-@mixin columns ($width, $wrap: wrap) {
+@mixin columns ($width) {
   display: flex;
-  flex-wrap: $wrap;
   gap: 4rem;
   justify-content: space-between;
   >* {
     flex-basis: $width;
+    flex-grow: 1;
   }
   @include media-laptop {
     gap: calc(40 / 1440 * 100vw);
+  }
+  @include media-tablet {
+    gap: calc(40 / 768 * 100vw);
+  }
+  @include media-mobile {
+    gap: calc(40 / 380 * 100vw);
   }
 }
 
@@ -28,6 +34,7 @@
   @media screen and (max-width: $tablet-width) { @content; }
   }
 
+// Didn't use in this project
 @mixin media-mobile {
   @media screen and (max-width: $mobile-big-width) { @content; }
   }
@@ -40,6 +47,7 @@
   @media (hover: hover) and (pointer: fine) { @content; }
 }
 
+// Color change for laptop
 @mixin conditional-hover {
   @media (hover: hover) and (pointer: fine) { 
       &:hover {

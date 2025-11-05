@@ -1,0 +1,39 @@
+@use "../abstracts/index" as *;
+
+.form__input {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-grow: 1;
+  padding: 0 212px;
+  input {
+    flex-basis: 40%;
+    border: 1px solid $color-background;
+    text-transform: uppercase;
+    font-family: $second-family;
+    padding: 18px 12px;
+    @include hover-pointer-fine {
+      &:hover, &:focus {
+        border: 1px solid $color-hover;
+        outline: none;
+        transition: border-color .3s ease-out;
+      }
+    }
+  }
+  button {
+    flex-basis: 21%;
+  }
+  @include media-laptop {
+    padding: 0 calc(212 / 1440 * 100vw);
+  }
+  @include media-tablet {
+    padding: 0;
+  }
+  @include media-smobile {
+    flex-direction: column;
+  }
+}
+
+.form__header {
+  align-self: center;
+}

@@ -4,6 +4,15 @@
   max-width: $content-width;
   margin: auto;
   padding: 0 20px;
+  @include media-laptop {
+    padding: 0 calc(20 / 1440 * 100vw)
+  }
+  @include media-tablet {
+    padding: 0 calc(20 / 768 * 100vw)
+  }
+  @include media-smobile {
+    padding: 0 calc(20 / 380 * 100vw)
+  }
 }
 
 .header__wrapper {
@@ -15,8 +24,46 @@
 
 .hero__wrapper {
   display: flex;
+  justify-content: space-between;
   gap: 60px;
   @include media-laptop {
     gap: calc(60 / 1440 * 100vw)
+  }
+  @include media-tablet {
+    gap: calc(60 / 768 * 100vw)
+  }
+}
+
+.about__wrapper, .faq__wrapper {
+  @include media-tablet {
+    padding: calc(60 / 768 * 100vw) calc(20 / 768 * 100vw);
+  }
+  @include media-smobile {
+    padding: calc(60 / 380 * 100vw) calc(20 / 380 * 100vw);
+  }
+}
+
+// Form
+.form__wrapper {
+  display: flex;
+  padding: 40px 20px 20px;
+  gap: 20px;
+  flex-direction: column;
+}
+
+// Footer
+.contact__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $second-family;
+  text-transform: uppercase;
+  padding: 20px;
+  @include media-tablet {
+    padding: calc(20 / 768 * 100vw);
+  }
+  @include media-smobile {
+    flex-direction: column;
+    padding: calc(20 / 380 * 100vw);
   }
 }

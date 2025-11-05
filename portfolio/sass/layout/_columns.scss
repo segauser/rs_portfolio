@@ -1,13 +1,21 @@
 @use "../abstracts/index" as *;
 
 .layout-4-column {
-  @include columns ($width: 24%)
+  @include columns ($width: 25%)
 }
 
 .layout-3-column {
-  @include columns ($width: 440px, $wrap: nowrap);
+  @include columns ($width: 440px);
+  @include media-tablet {
+      @include columns ($width: 100%);
+      .about__item:last-child {
+        img {
+          display: none;
+        }
+      }
+    }
 }
 
 .layout-2-column {
-  @include columns ($width: 45%)
+  @include columns ($width: 50%);
 }

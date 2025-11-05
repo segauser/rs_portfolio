@@ -1,0 +1,14 @@
+@use "../abstracts/index" as *;
+
+.page__footer {
+  background-color: $color-background;
+}
+
+.contact__item {
+  padding: 20px 18px;
+  >* {
+    color: $color-text;
+    text-decoration: none; /* убирает подчёркивание линка*/
+    @include conditional-hover;
+  }
+}

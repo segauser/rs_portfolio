@@ -13,6 +13,12 @@ body {
   @include media-laptop {
       @include font(400, calc(16 / 1440 * 100vw), 150%, none);
     }
+  @include media-tablet {
+      @include font(400, calc(16 / 768 * 100vw), 150%, none);
+    }
+  @include media-smobile {
+      @include font(400, calc(16 / 380 * 100vw), 150%, none);
+    }
   
 }
 
@@ -22,6 +28,12 @@ h1 {
   margin: 0;
   @include media-laptop {
       @include font(300, calc(116 / 1440 * 100vw), 114%);
+    }
+  @include media-tablet {
+      @include font(300, calc(68 / 768 * 100vw), 118%);
+    }
+  @include media-smobile {
+      @include font(300, calc(56 / 380 * 100vw), 114%);
     }
   
 }
@@ -33,13 +45,27 @@ h2 {
   @include media-laptop {
       @include font(400, calc(32 / 1440 * 100vw), 125%);
     }
+  @include media-tablet {
+      @include font(400, calc(32 / 768 * 100vw), 125%);
+    }
+  @include media-smobile {
+      @include font(400, calc(32 / 380 * 100vw), 125%);
+    }
 }
 
-h3, details {
-  @include font(400, 20px, 140%, none);
+h3, summary {
+  @include font(400, 20px, 140%);
+  font-family: $second-family;
+  margin: 0;
   @include media-laptop {
-      @include font(400, calc(20 / 1440 * 100vw), 140%, none);
+      @include font(400, calc(20 / 1440 * 100vw), 140%);
     }
+  @include media-tablet {
+    @include font(400, calc(20 / 768 * 100vw), 140%);
+  }
+  @include media-smobile {
+    @include font(400, calc(20 / 380 * 100vw), 140%);
+  }
 }
 
 img {

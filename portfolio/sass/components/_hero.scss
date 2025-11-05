@@ -11,6 +11,13 @@
   @include media-laptop {
     gap: calc(40 / 1440 * 100vw)
   }
+  @include media-tablet {
+    gap: calc(20 / 768 * 100vw)
+  }
+   @include media-smobile {
+    flex-direction: column;
+    gap: calc(10 / 380 * 100vw)
+  }
   // flex-wrap: wrap;
 }
 
@@ -27,6 +34,14 @@
   @include media-laptop {
       @include font(500, calc(12 / 1440 * 100vw), 133%, none);
       gap: calc(12 / 1440 * 100vw);
+    }
+
+  @include media-tablet {
+      @include font(500, calc(12 / 768 * 100vw), 133%, none);
+      gap: calc(12 / 768 * 100vw);
+    }
+  @include media-smobile {
+      display: none;
     }
 
   >*:first-child {
@@ -56,10 +71,25 @@
     @include media-laptop {
       padding: calc(60 / 1440 * 100vw) 0;
     }
+    @include media-tablet {
+      padding: calc(60 / 768  * 100vw) 0;
+    }
+    @include media-smobile {
+      padding: 0;
+    }
   }
 
   &_info {
     max-width: 740px;
+    @include media-laptop {
+      max-width: calc(740 / 1440 * 100vw);
+    }
+    @include media-tablet {
+      max-width: calc(408 / 768 * 100vw);
+    }
+    @include media-smobile {
+      max-width: calc(340 / 380 * 100vw);
+    }
   }
 
   &_photo {
@@ -69,6 +99,9 @@
     @include media-laptop {
       max-width: calc(220 / 1440 * 100vw);
       min-height: calc(220 / 1440 * 100vw)
+    }
+    @include media-tablet {
+      display: none;
     }
   }
 
@@ -80,6 +113,16 @@
       max-width: calc(280 / 1440 * 100vw);
       min-height: calc(374 / 1440 * 100vw)
     }
+    @include media-tablet {
+      max-width: calc(220 / 768 * 100vw);
+      min-height: calc(294 / 768 * 100vw)
+    }
+    @include media-smobile {
+      gap: calc(60 / 380 * 100vw);
+      padding: 0 0 calc(60 / 380 * 100vw) calc(120 / 380 * 100vw);
+      max-width: calc(340 / 380 * 100vw);
+      min-height: calc(294 / 380 * 100vw)
+    }
   }
 
   &_text {
@@ -88,6 +131,12 @@
     @include media-laptop {
       padding-left: calc(60 / 1440 * 100vw);
     }
+    @include media-tablet {
+      padding-left: 0px;
+    }
+    // @include media-smobile {
+    //   padding-left: calc(120 / 380 * 100vw);
+    // }
   }
 }
 
@@ -100,6 +149,15 @@
       gap: calc(40 / 1440 * 100vw);
       margin: calc(100 / 1440 * 100vw) 0;
     }
+  @include media-tablet {
+      gap: calc(40 / 768 * 100vw);
+      margin: calc(100 / 768 * 100vw) 0;
+    }
+  @include media-smobile {
+      gap: calc(40 / 380 * 100vw);
+      margin: 0;
+      padding-top: calc(60 / 380 * 100vw);
+    }
 }
 
 .main__description {
@@ -108,12 +166,25 @@
   @include media-laptop {
     @include font(400, calc(20 / 1440 * 100vw), 140%);
   }
+  @include media-tablet {
+    @include font(400, calc(20 / 768 * 100vw), 140%);
+  }
+  @include media-smobile {
+    @include font(400, calc(20 / 380 * 100vw), 140%);
+  }
 }
 
 .scroll-arrow {
     @include media-laptop {
       width: calc(24 / 1440 * 100vw);
       height: calc(24 / 1440 * 100vw);
+    }
+    @include media-tablet {
+      width: calc(24 / 768 * 100vw);
+      height: calc(24 / 768 * 100vw);
+    }
+    @include media-smobile {
+      display: none;
     }
   }
 
@@ -126,7 +197,7 @@
   margin-top: 60px;
   // @extend %transition;
 
-  // Animation only for computer mouse
+  // Color change only for computer mouse
   @include hover-pointer-fine {
     &:hover {
       color: $color-hover;
@@ -160,6 +231,15 @@
   @include media-laptop {
     margin-top: calc(60 / 1440 * 100vw);
     gap: calc(8 / 1440 * 100vw);
+    max-width: calc(120 / 1440 * 100vw);
+  }
+  @include media-tablet {
+    margin-top: calc(60 / 768 * 100vw);
+    gap: calc(8 / 768 * 100vw);
+    max-width: calc(120 / 768 * 100vw);
+  }
+  @include media-smobile {
+    display: none;
   }
 
 }
@@ -177,6 +257,14 @@
       @include font(300, calc(48 / 1440 * 100vw), 112%, none);
       gap: calc(8 / 1440 * 100vw)
     }
+    @include media-tablet {
+      @include font(300, calc(48 / 768 * 100vw), 112%, none);
+      gap: calc(8 / 768 * 100vw)
+    }
+    @include media-smobile {
+      @include font(300, calc(48 / 380 * 100vw), 112%, none);
+      gap: calc(8 / 380 * 100vw)
+    }
   }
   &__text {
     margin-top: 8px;
@@ -185,8 +273,20 @@
     @include media-laptop {
       @include font(400, calc(16 / 1440 * 100vw), 150%, none);
     }
+     @include media-tablet {
+      @include font(400, calc(16 / 768 * 100vw), 150%, none);
+    }
+     @include media-smobile {
+      @include font(400, calc(16 / 380 * 100vw), 150%, none);
+    }
   }
   @include media-laptop {
       gap: calc(60 / 1440 * 100vw);
+    }
+  @include media-tablet {
+      gap: calc(60 / 768 * 100vw);
+    }
+  @include media-smobile {
+      gap: calc(60 / 380 * 100vw);
     }
 }

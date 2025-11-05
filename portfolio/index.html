@@ -18,6 +18,7 @@
       <div class="header__logo">
         <a href="#" class="header__logo-link"></a>
       </div>
+      <button class="hamburger"></button>
       <nav class="header__nav">
         <ul class="nav">
           <li class="nav__item"><a href="#about">About me</a></li>
@@ -87,7 +88,7 @@
     </div>
   </section>
   <section id="about" class="page__about">
-    <div class="wrapper layout-3-column">
+    <div class="wrapper about__wrapper layout-3-column">
       <div class="about__item">
         <img src="image/webp/img-photographer-1.webp" alt="pic3">
         <div class="about__item_container">
@@ -132,7 +133,7 @@
       <div class="packages layout-4-column">
         <div class="packages__item">
           <div>
-            <div class="packages__name">Mini</div>
+            <h3 class="packages__name">Mini</h3>
             <ul class="packages__list">
               <li class="list__item">Up to 1 hour of shooting</li>
               <li class="list__item">1 outfit / 1 location</li>
@@ -144,14 +145,12 @@
           </div>
           <div>
             <div class="packages__advantages">For short sessions and quick results</div>
-            <button class="button packages__button" type="submit">
-              <span> Book now</span>
-            </button>
+            <button class="button packages__button" type="submit">Book now</button>
           </div>
         </div>
         <div class="packages__item">
           <div>
-            <div class="packages__name">Classic</div>
+            <h3 class="packages__name">Classic</h3>
             <ul class="packages__list">
               <li class="list__item">Up to 2 hours of shooting</li>
               <li class="list__item">2 outfits / 2 locations</li>
@@ -165,14 +164,12 @@
           </div>
           <div>
             <div class="packages__advantages">Perfect for couples, portraits, or lifestyle</div>
-            <button class="button packages__button" type="submit">
-              <span> Book now</span>
-            </button>
+            <button class="button packages__button" type="submit">Book now</button>
           </div>
         </div>
         <div class="packages__item">
           <div>
-            <div class="packages__name">Story</div>
+            <h3 class="packages__name">Story</h3>
             <ul class="packages__list">
               <li class="list__item">Up to 4 hours of shooting</li>
               <li class="list__item">3–4 outfits and locations</li>
@@ -187,14 +184,12 @@
           </div>
           <div>
             <div class="packages__advantages">For when you want to capture everything</div>
-            <button class="button packages__button" type="submit">
-              <span> Book now</span>
-            </button>
+            <button class="button packages__button" type="submit">Book now</button>
           </div>
         </div>
         <div class="packages__item">
           <div>
-            <div class="packages__name">Wedding</div>
+            <h3 class="packages__name">Wedding</h3>
             <ul class="packages__list">
               <li class="list__item">Up to 8 hours of shooting</li>
               <li class="list__item">All key moments covered</li>
@@ -209,74 +204,103 @@
           </div>
           <div>
             <div class="packages__advantages">Full-day or partial wedding coverage</div>
-            <button class="button packages__button" type="submit">
-              <span> Book now</span>
-            </button>
+            <button class="button packages__button" type="submit">Book now</button>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section class="page__faq">
-    <div class="wrapper layout-2-column">
-      <div class="faq">
+    <div class="wrapper faq__wrapper layout-2-column">
+      <div class="faq__item">
         <h2 class="second__header second__header_white">Frequently Asked Questions</h2>
-        <div class="second__description">Everything You Wanted to Ask (and a Bit More)</div>
+        <p class="second__description">Everything You Wanted to Ask (and a Bit More)</p>
       </div>
-      <div class="questions">
+      <div class="faq__item questions">
         <details class="questions__item">
-          <summary class="questions__summary">How do I book a shoot?</summary>
+          <summary class="questions__summary">How do I book a shoot?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">Super simple – just message me through any convenient platform (Instagram, Telegram, WhatsApp, or the contact form on this site). We’ll discuss your preferred date, city, and session type. Once confirmed, I’ll reserve the date for you and send over preparation tips.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">Can I choose the location myself?</summary>
+          <summary class="questions__summary">Can I choose the location myself?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">Absolutely! If there’s a special place you love or have in mind — I’m happy to shoot there. If you’re unsure, I can suggest beautiful spots with great lighting and atmosphere, tailored to your vision and mood.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">How long does the shoot take?</summary>
+          <summary class="questions__summary">How long does the shoot take?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">That depends on the package you choose. On average, sessions last from 1 to 4 hours. We’ll plan the pace and type of shoot together — from relaxed city strolls and love stories to more dynamic or editorial sessions.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">When will I receive the photos?</summary>
+          <summary class="questions__summary">When will I receive the photos?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">You’ll receive your edited photos within 7–14 days. For event and wedding sessions — up to 30 days. I deliver them in a stylish online gallery, where you can download them in full quality or easily share with friends and family.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">Will you help me pose?</summary>
+          <summary class="questions__summary">Will you help me pose?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">Definitely! I’ll guide you gently throughout the session — where to look, how to move, how to relax. The goal is to make you feel comfortable and natural. My approach is relaxed, and I’ll never force awkward poses. The result? Real, expressive, and beautiful photos.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">What should I wear?</summary>
+          <summary class="questions__summary">What should I wear?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">After booking, I’ll send you a style guide with suggestions for colors, textures, and combinations. The most important thing is that you feel confident in your outfit. I’m also happy to help you coordinate looks or plan something cohesive for couples or groups.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">Do you retouch the photos?</summary>
+          <summary class="questions__summary">Do you retouch the photos?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">Yes, all photos are color-corrected and lightly retouched. My editing style is clean and natural — no overdone filters or fake skin. Just you, at your best. Extra retouching is available upon request.</p>
         </details>
         <details class="questions__item">
-          <summary class="questions__summary">Can I get the raw files?</summary>
+          <summary class="questions__summary">Can I get the raw files?
+          <svg width="16" class="plus" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 0C8.16421 0 8.5 0.335786 8.5 0.75V7H14.75C15.1642 7 15.5 7.33579 15.5 7.75C15.5 8.16421 15.1642 8.5 14.75 8.5H8.5V14.75C8.5 15.1642 8.16421 15.5 7.75 15.5C7.33579 15.5 7 15.1642 7 14.75V8.5H0.75C0.335786 8.5 0 8.16421 0 7.75C0 7.33579 0.335786 7 0.75 7H7V0.75C7 0.335786 7.33579 0 7.75 0Z" fill="white"/>
+          </svg>
+          </summary>
           <p class="questions__answer">I don’t deliver RAW files. My work includes not only shooting, but also careful selection and editing to create a complete and polished result. You’ll receive only the best images, ready for printing, sharing, or publishing.</p>
         </details>
       </div>
     </div>
   </section>
+  <section class="page_form">
+    <div class="wrapper form__wrapper">
+      <h3 class="form__header">Like my portfolio? Sign up for a shoot!</h3>
+      <div class="form__input">
+        <input type="text" name="name" value="" placeholder="Your name" id="input-name" class="form-control">
+        <input type="text" name="number" value="" placeholder="+1" id="input-number" class="form-control">
+        <button class="button form__button" type="submit">Book now</button>
+      </div>
+    </div>
+  </section>
   <footer class="page__footer">
-    <div class="wrapper">
-      
-    </div>
-    <h2 class="second__header">Like my portfolio? Sign up for a shoot!</h2>
-    <div class="footer-form">
-      <input type="text" name="name" value="" placeholder="YOUR NAME" id="input-name" class="form-control">
-      <input type="text" name="number" value="" placeholder="+1" id="input-number" class="form-control">
-      <button class="button footer__button" type="submit">
-        <span> Book now</span>
-      </button>
-    </div>
-    <div class="contacts">
-      <div class="contacts__item"><a href="#" target="_blank">instagram</a></div>
-      <div class="contacts__item"><a href="#" target="_blank"></a>telegram</div>
-      <div class="contacts__item"><a href="#" target="_blank"></a>whatsapp</div>
-      <div class="contacts__item">Europe</div>
-      <div class="contacts__item"><a href="tel:+1 234 9843572">+1 234 9843572</a></div>
+    <div class="wrapper contact__wrapper">
+      <div class="contact__item"><a href="#" target="_blank">instagram</a></div>
+      <div class="contact__item"><a href="#" target="_blank">telegram</a></div>
+      <div class="contact__item"><a href="#" target="_blank">whatsapp</a></div>
+      <div class="contact__item"><a href="#" target="_blank">Europe</a></div>
+      <div class="contact__item"><a href="tel:+1 234 9843572">+1 234 9843572</a></div>
     </div>
   </footer>
 </body>

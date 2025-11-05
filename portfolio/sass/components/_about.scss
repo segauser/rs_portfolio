@@ -21,9 +21,24 @@
       min-width: calc(440 / 1440 * 100vw);
       max-height: calc(440 / 1440 * 100vw)
     }
+    @include media-tablet {
+      min-width: calc(728 / 768 * 100vw);
+      max-height: calc(728 / 768 * 100vw);
+    }
+    @include media-smobile {
+      min-width: calc(340 / 380 * 100vw);
+      max-height: calc(340 / 380 * 100vw)
+    }
   }
   @include media-laptop {
     padding: calc(60 / 1440 * 100vw) 0;
     gap:  calc(40 / 1440 * 100vw)
+  }
+  @include media-tablet {
+    padding: 0;
+    gap:  calc(40 / 768 * 100vw)
+  }
+  @include media-smobile {
+    gap:  calc(40 / 380 * 100vw)
   }
 }
