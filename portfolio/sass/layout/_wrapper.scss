@@ -34,9 +34,25 @@
   }
 }
 
-.about__wrapper, .faq__wrapper {
+.about__wrapper {
   @include media-tablet {
     padding: calc(60 / 768 * 100vw) calc(20 / 768 * 100vw);
+  }
+  @include media-smobile {
+    padding: calc(60 / 380 * 100vw) calc(20 / 380 * 100vw);
+  }
+}
+
+// FAQ
+.faq__wrapper {
+  padding: 60px 20px;
+
+  @include media-laptop {
+    padding: calc(60 / 1440 * 100vw) calc(20 / 768 * 100vw);
+    }
+  @include media-tablet {
+    padding: calc(60 / 768 * 100vw) calc(20 / 768 * 100vw);
+    flex-direction: column;
   }
   @include media-smobile {
     padding: calc(60 / 380 * 100vw) calc(20 / 380 * 100vw);

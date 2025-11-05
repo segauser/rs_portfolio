@@ -106,7 +106,7 @@ h2 {
   }
 }
 
-h3, summary {
+h3, .questions__summary {
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
@@ -115,7 +115,7 @@ h3, summary {
   margin: 0;
 }
 @media screen and (max-width: 1440px) {
-  h3, summary {
+  h3, .questions__summary {
     font-weight: 400;
     font-size: 1.3888888889vw;
     line-height: 140%;
@@ -123,7 +123,7 @@ h3, summary {
   }
 }
 @media screen and (max-width: 768px) {
-  h3, summary {
+  h3, .questions__summary {
     font-weight: 400;
     font-size: 2.6041666667vw;
     line-height: 140%;
@@ -131,7 +131,7 @@ h3, summary {
   }
 }
 @media screen and (max-width: 380px) {
-  h3, summary {
+  h3, .questions__summary {
     font-weight: 400;
     font-size: 5.2631578947vw;
     line-height: 140%;
@@ -141,6 +141,10 @@ h3, summary {
 
 img {
   max-width: 100%;
+}
+
+p {
+  margin: 0;
 }
 
 button {
@@ -621,110 +625,77 @@ button {
   }
 }
 
+.second__description {
+  padding-top: 12px;
+}
+
 .page__faq {
   background-color: #222;
   color: #fff;
 }
 
-.faq__item {
-  padding: 60px 0;
+.questions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-@media screen and (max-width: 1440px) {
-  .faq__item {
-    padding: 4.1666666667vw 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .faq__item {
-    padding: 7.8125vw 0;
-  }
-}
-@media screen and (max-width: 380px) {
-  .faq__item {
-    padding: 15.7894736842vw 0;
-  }
-}
-
 .questions__item {
+  position: relative;
   padding: 18px 0;
   border-bottom: 1px solid #fff;
 }
-
-details[open] .questions__summary svg {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(0, -50%) rotate(180deg);
-}
-details[open] .questions__summary:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  display: block;
-  width: 16px;
-  height: 2px;
+.questions__item:has(.questions__summary:focus-within) .questions__answer {
+  padding-top: 18px;
   opacity: 1;
   visibility: visible;
-  transform: rotate(360deg) translate(0, -50%);
-  background-color: #fff;
+  height: auto;
 }
-@media (hover: hover) and (pointer: fine) {
-  details[open] .questions__summary:hover:after {
-    background-color: #ff3c3c;
-    transition: background-color 0.3s ease;
-  }
+.questions__item:has(.questions__summary:focus-within) .questions__icon path:nth-child(1) {
+  transform: scale(0) rotate(90deg);
+  transition: transform 0.3s ease;
 }
-
+.questions__item:has(.questions__summary:focus-within) .questions__icon path:nth-child(2) {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
 .questions__summary {
-  position: relative;
-  list-style: none;
-  cursor: pointer;
-}
-.questions__summary svg {
-  position: absolute;
-  opacity: 1;
-  visibility: visible;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%) rotate(360deg);
-  transition: all 0.9s ease;
-}
-.questions__summary:after {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  opacity: 0;
-  visibility: hidden;
-  transform: rotate(180deg) translate(0, -50%);
-  transition: transform 0.9s ease, visibility 0.9s ease;
-  content: "";
-  display: block;
-  width: 16px;
-  height: 2px;
-  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  color: #fff;
+  width: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
 }
 @media (hover: hover) and (pointer: fine) {
   .questions__summary:hover {
     color: #ff3c3c;
     transition: color 0.3s ease;
   }
-  .questions__summary:hover .plus path {
+  .questions__summary:hover .questions__icon path {
     fill: #ff3c3c;
     transition: fill 0.3s ease;
   }
 }
-
-details[open] .questions__answer {
-  block-size: auto;
-  block-size: calc-size(auto, size);
-  transition: all 0.5s allow-discrete;
+.questions__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0, 18px);
 }
-
+.questions__icon path {
+  transform-origin: 50%;
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
 .questions__answer {
-  display: block;
-  block-size: 0;
-  overflow: hidden;
-  transition: all 0.5s allow-discrete;
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition: height 0.3s ease, opacity 0.3s allow-discrete, visibility 0.3s allow-discrete;
 }
 
 .form__input {
@@ -922,12 +893,32 @@ details[open] .questions__answer {
 }
 
 @media screen and (max-width: 768px) {
-  .about__wrapper, .faq__wrapper {
+  .about__wrapper {
     padding: 7.8125vw 2.6041666667vw;
   }
 }
 @media screen and (max-width: 380px) {
-  .about__wrapper, .faq__wrapper {
+  .about__wrapper {
+    padding: 15.7894736842vw 5.2631578947vw;
+  }
+}
+
+.faq__wrapper {
+  padding: 60px 20px;
+}
+@media screen and (max-width: 1440px) {
+  .faq__wrapper {
+    padding: 4.1666666667vw 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .faq__wrapper {
+    padding: 7.8125vw 2.6041666667vw;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 380px) {
+  .faq__wrapper {
     padding: 15.7894736842vw 5.2631578947vw;
   }
 }

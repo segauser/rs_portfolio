@@ -1,120 +1,81 @@
 @use "../abstracts/index" as *;
 
+.second__description {
+  padding-top: 12px;
+}
+
 .page__faq {
   background-color: $color-background;
   color: $color-text;
 }
 
-.faq__item {
-  padding: 60px 0;
-
-  @include media-laptop {
-      padding: calc(60 / 1440 * 100vw) 0;
-    }
-  @include media-tablet {
-    padding: calc(60 / 768 * 100vw) 0;
-  }
-  @include media-smobile {
-    padding: calc(60 / 380 * 100vw) 0;
-  }
-}
-
-.questions__item {
-  padding: 18px 0;
-  border-bottom: 1px solid $color-text;
-}
-
-details[open] .questions__summary {
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
-  svg {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0, -50%) rotate(180deg);
-    // transition: all 0.9s ease;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    display: block;
-    width: 16px;
-    height: 2px;
-    opacity: 1;
-    visibility: visible;
-    transform: rotate(360deg) translate(0, -50%);
-    // transition: transform 0.9s ease;
-    background-color: #fff;
-  }
-  @include hover-pointer-fine {
-    &:hover:after {
-      background-color: $color-hover;
-      transition: background-color .3s ease;
-    }
-  }
-}
-
-.questions__summary {
-  position: relative;
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
+.questions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  cursor: pointer;
-  svg {
-    position: absolute;
-    opacity: 1;
-    visibility: visible;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%) rotate(360deg);
-    transition: all 0.9s ease;
-  }
-  &:after {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    opacity: 0;
-    visibility: hidden;
-    transform: rotate(180deg) translate(0, -50%);
-    transition: transform 0.9s ease, visibility 0.9s ease;
-    content: "";
-    display: block;
-    width: 16px;
-    height: 2px;
-    background-color: #fff;
-  }
-  @include hover-pointer-fine {
-    &:hover {
-      color: $color-hover;
-      transition: color .3s ease;
-      .plus {
-        path {
-          fill: $color-hover;
-          transition: fill .3s ease;
+  &__item {
+    position: relative;
+    padding: 18px 0;
+    border-bottom: 1px solid $color-text;
+    //immitation of open behavior
+    &:has(.questions__summary:focus-within) {
+      .questions__answer {
+      padding-top: 18px;
+      opacity: 1;
+      visibility: visible; 
+      height: auto;
+      }
+      .questions__icon {
+        path:nth-child(1) {
+          transform: scale(0) rotate(90deg);
+          transition: transform .3s ease;
+        }
+        path:nth-child(2) {
+          transform: rotate(180deg);
+          transition: transform .3s ease;
         }
       }
     }
   }
-}
-
-details[open] .questions__answer {
-  // opacity: 1;
-  // visibility: visible;
-  // transition: opacity 0.9s ease;
-  block-size: auto;
-  block-size: calc-size(auto, size);
-  transition: all .5s allow-discrete;
-}
-
-.questions__answer {
-  // opacity: 0;
-  // visibility: hidden;
-  // transition: opacity 0.9s ease, visibility 0.9s ease;
-  display: block;
-  block-size: 0;
-  overflow: hidden;
-  transition: all .5s allow-discrete;
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-background;
+    color: $color-text;
+    width: 100%;
+    padding: 0;
+    outline: none;
+    border: none;
+    @include hover-pointer-fine {
+      &:hover {
+        color: $color-hover;
+        transition: color .3s ease;
+        .questions__icon {
+          path {
+            fill: $color-hover;
+            transition: fill .3s ease;
+          }
+        }
+      }
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0 , 18px); //padding &__item 
+    path {
+      transform-origin: 50%;
+      transition: transform .3s ease, fill .3s ease;
+    }
+  }
+  &__answer {
+    opacity: 0; //1
+    visibility: hidden; //visible
+    height: 0; //auto
+    transition: height .3s ease, opacity .3s allow-discrete, visibility .3s allow-discrete;
+  }
 }
