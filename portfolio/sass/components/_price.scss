@@ -1,0 +1,97 @@
+@use "../abstracts/index" as *;
+
+.list__item {
+  display: flex;
+  gap: 6px;
+  &::before {
+      margin-top: 9px;
+      content: '';
+      display: block;
+      min-width: 6px;
+      height: 6px;
+      background-color: $color-background;
+      @include media-laptop {
+        margin-top: calc(9 / 1440 * 100vw);
+        min-width: calc(6 / 1440 * 100vw);
+        height: calc(6 / 1440 * 100vw);
+      }
+      @include media-tablet {
+        margin-top: calc(9 / 768 * 100vw);
+        min-width: calc(6 / 768 * 100vw);
+        height: calc(6 / 768 * 100vw);
+      }
+      @include media-smobile {
+        margin-top: calc(9 / 380 * 100vw);
+        min-width: calc(6 / 380 * 100vw);
+        height: calc(6 / 380 * 100vw);
+      }
+    }
+}
+
+.packages {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    border: 1px solid $color-background;
+    padding: 2.4rem;
+    @include hover-pointer-fine {
+      &:hover {
+        border: 1px solid $color-hover;
+        outline: none;
+        transition: border-color .3s ease-out;
+      }
+      &:hover .packages__button {
+        background-color: $color-hover;
+        color: $color-background;
+        transition: background-color .3s ease-out;
+      }
+    }
+    @include media-laptop {
+    padding: calc(24 / 1440 * 100vw)
+    }
+    @include media-tablet {
+      padding: calc(24 / 768 * 100vw)
+    }
+    @include media-smobile {
+      padding: calc(24 / 380 * 100vw)
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__advantages {
+    font-style: italic;
+    line-height: 1.25em;
+  }
+  &__price {
+    font-family: $second-family;
+  }
+  &__submit{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  @include media-laptop {
+    margin-top: calc(40 / 1440 * 100vw);
+    gap : calc(40 / 1440 * 100vw);
+  }
+  @include media-tablet {
+    margin-top: calc(40 / 768 * 100vw);
+    padding: 0 calc(34 / 768 * 100vw);
+    flex-wrap: wrap;
+  }
+  @include media-smobile {
+    margin-top: calc(40 / 380 * 100vw);
+    padding: 0 calc(10 / 768 * 100vw);
+  }
+}

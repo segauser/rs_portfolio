@@ -742,6 +742,117 @@ button {
   align-self: center;
 }
 
+.list__item {
+  display: flex;
+  gap: 6px;
+}
+.list__item::before {
+  margin-top: 9px;
+  content: "";
+  display: block;
+  min-width: 6px;
+  height: 6px;
+  background-color: #222;
+}
+@media screen and (max-width: 1440px) {
+  .list__item::before {
+    margin-top: 0.625vw;
+    min-width: 0.4166666667vw;
+    height: 0.4166666667vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .list__item::before {
+    margin-top: 1.171875vw;
+    min-width: 0.78125vw;
+    height: 0.78125vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  .list__item::before {
+    margin-top: 2.3684210526vw;
+    min-width: 1.5789473684vw;
+    height: 1.5789473684vw;
+  }
+}
+
+.packages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  border: 1px solid #222;
+  padding: 2.4rem;
+}
+@media (hover: hover) and (pointer: fine) {
+  .packages__item:hover {
+    border: 1px solid #ff3c3c;
+    outline: none;
+    transition: border-color 0.3s ease-out;
+  }
+  .packages__item:hover .packages__button {
+    background-color: #ff3c3c;
+    color: #222;
+    transition: background-color 0.3s ease-out;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .packages__item {
+    padding: 1.6666666667vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .packages__item {
+    padding: 3.125vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  .packages__item {
+    padding: 6.3157894737vw;
+  }
+}
+.packages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.packages__offer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.packages__advantages {
+  font-style: italic;
+  line-height: 1.25em;
+}
+.packages__price {
+  font-family: "Oswald", Verdana, sans-serif;
+}
+.packages__submit {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media screen and (max-width: 1440px) {
+  .packages {
+    margin-top: 2.7777777778vw;
+    gap: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .packages {
+    margin-top: 5.2083333333vw;
+    padding: 0 4.4270833333vw;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 380px) {
+  .packages {
+    margin-top: 10.5263157895vw;
+    padding: 0 1.3020833333vw;
+  }
+}
+
 .layout-4-column {
   display: flex;
   gap: 4rem;
@@ -761,9 +872,61 @@ button {
     gap: 5.2083333333vw;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 380px) {
   .layout-4-column {
     gap: 10.5263157895vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .layout-4-column {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+  }
+  .layout-4-column > * {
+    flex-basis: 40%;
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 1440px) {
+  .layout-4-column {
+    gap: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .layout-4-column {
+    gap: 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 380px) {
+  .layout-4-column {
+    gap: 5.2631578947vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  .layout-4-column {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+  }
+  .layout-4-column > * {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+}
+@media screen and (max-width: 380px) and (max-width: 1440px) {
+  .layout-4-column {
+    gap: 2.7777777778vw;
+  }
+}
+@media screen and (max-width: 380px) and (max-width: 768px) {
+  .layout-4-column {
+    gap: 2.6041666667vw;
+  }
+}
+@media screen and (max-width: 380px) and (max-width: 380px) {
+  .layout-4-column {
+    gap: 5.2631578947vw;
   }
 }
 
@@ -786,7 +949,7 @@ button {
     gap: 5.2083333333vw;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 380px) {
   .layout-3-column {
     gap: 10.5263157895vw;
   }
@@ -812,7 +975,7 @@ button {
     gap: 5.2083333333vw;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 414px) {
+@media screen and (max-width: 768px) and (max-width: 380px) {
   .layout-3-column {
     gap: 10.5263157895vw;
   }
@@ -842,7 +1005,7 @@ button {
     gap: 5.2083333333vw;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 380px) {
   .layout-2-column {
     gap: 10.5263157895vw;
   }

@@ -7,7 +7,7 @@
   text-transform: $text-transform;
 }
 
-@mixin columns ($width) {
+@mixin columns ($width, $gap:40) {
   display: flex;
   gap: 4rem;
   justify-content: space-between;
@@ -19,10 +19,10 @@
     gap: calc(40 / 1440 * 100vw);
   }
   @include media-tablet {
-    gap: calc(40 / 768 * 100vw);
+    gap: calc($gap / 768 * 100vw);
   }
-  @include media-mobile {
-    gap: calc(40 / 380 * 100vw);
+  @include media-smobile {
+    gap: calc($gap / 380 * 100vw);
   }
 }
 

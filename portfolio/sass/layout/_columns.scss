@@ -1,8 +1,14 @@
 @use "../abstracts/index" as *;
 
 .layout-4-column {
-  @include columns ($width: 25%)
-}
+  @include columns ($width: 25%);
+  @include media-tablet {
+    @include columns ($width: 40%, $gap: 20);
+    }
+  @include media-smobile {
+    @include columns ($width: 100%, $gap: 20);
+  }
+  }
 
 .layout-3-column {
   @include columns ($width: 440px);
